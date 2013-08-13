@@ -26,6 +26,7 @@ requires = [
 
 setup(
     name='datetimes',
+    version=datetimes.__version__,
     description='Extended Python Datetime',
     long_description=open('README.md').read(),
     author='Soshio',
