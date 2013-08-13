@@ -21,7 +21,7 @@ def stamp_time(message=None):
     logging.info(text)
     
 def now():
-    return utcnow()
+    return datetime.utcnow()
     
 def now_in_timestamp():
     return to_timestamp(now())
@@ -40,12 +40,12 @@ def extract_datetime(datetime_str):
     if not datetime_str or datetime_str == u'NaN': return None
     if type(datetime_str) is datetime: return datetime_str
     if type(datetime_str) is int or type(datetime_str) is float or type(datetime_str) is long:
-        return utcfromtimestamp(int(datetime_str))
+        return datetime.utcfromtimestamp(int(datetime_str))
     try:
         return dateutil.parser.parse(datetime_str).astimezone(utc_timezone).replace(tzinfo=None)
     except ValueError:
         try:
-            return utcfromtimestamp(int(datetime_str))
+            return datetime.utcfromtimestamp(int(datetime_str))
         except ValueError:
             logging.warning(u'Unable to parse datetime string <{0}>'.format(datetime_str))
             return None
