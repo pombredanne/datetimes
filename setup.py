@@ -22,9 +22,8 @@ requires = []
 
 setup(
     name='datetimes',
-    version=requests.__version__,
     description='Extended Python Datetime',
-    long_description=open('README.rst').read(),
+    long_description=open('README.md').read(),
     author='Soshio',
     author_email='tech@getsoshio.com',
     packages=packages,
