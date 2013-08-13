@@ -1,4 +1,5 @@
-#!/usr/bin/env python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 import os
 import sys
@@ -15,10 +16,13 @@ if sys.argv[-1] == 'publish':
     sys.exit()
 
 packages = [
-    'datetimes',
-]
+        'datetimes',
+    ]
 
-requires = []
+requires = [
+        'pytz',
+        'python-dateutil'
+    ]
 
 setup(
     name='datetimes',

@@ -8,6 +8,8 @@ import dateutil.relativedelta
 import dateutil.parser
 from datetime import *
 
+__version__ = '0.0.1'
+
 utc_timezone = pytz.UTC
 china_timezone = pytz.timezone('Asia/Shanghai')
 
