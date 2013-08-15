@@ -4,8 +4,6 @@
 import os
 import sys
 
-import datetimes
-
 try:
     from setuptools import setup
 except ImportError:
@@ -26,7 +24,7 @@ requires = [
 
 setup(
     name='datetimes',
-    version=datetimes.__version__,
+    version='0.0.1',
     description='Extended Python Datetime',
     long_description=open('README.md').read(),
     author='Soshio',
