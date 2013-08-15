@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+import pkg_resources
 import logging
 import calendar
 import pytz
@@ -8,7 +9,7 @@ import dateutil.relativedelta
 import dateutil.parser
 from datetime import *
 
-__version__ = '0.0.1'
+__version__ = pkg_resources.require("datetimes")[0].version
 
 utc_timezone = pytz.UTC
 china_timezone = pytz.timezone('Asia/Shanghai')
